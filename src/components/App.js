@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from "react";
 import "./../styles/App.css";
 
-fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig"];
+const fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig"];
 
 const App = () => {
   const [searchTerm, setsearchTerm] = useState("");
