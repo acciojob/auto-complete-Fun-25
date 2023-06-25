@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(()=>{
     setFruits(fruits.filter(value=>value.toLowerCase().includes(searchTerm.toLowerCase())))
-  },[search]
+  },[searchTerm]
 
   )
   return (
