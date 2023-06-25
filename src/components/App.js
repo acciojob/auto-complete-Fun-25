@@ -20,9 +20,9 @@ const App = () => {
         onChange={(e) => setsearchTerm(e.target.value)}
       />
       <ul>
-        {filterFruits.map((fruit) => {
-          <li>{fruit}</li>;
-        })}
+        {filterFruits.map((fruit) => (
+          <li>{fruit}</li>
+        ))}
       </ul>
     </div>
   );
