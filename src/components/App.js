@@ -5,10 +5,10 @@ fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig"];
 
 const App = () => {
   const [searchTerm, setsearchTerm] = useState("");
-  const [fruits,setFruits]=useState(fruits)
+  const [filterFruits,setFruits]=useState(fruits)
 
   useEffect(()=>{
-    setFruits(fruits.filter(value=>value.toLowerCase.includes(searchTerm.toLowerCase)))
+    setFruits(fruits.filter(value=>value.toLowerCase().includes(searchTerm.toLowerCase())))
   },[search]
 
   )
@@ -20,13 +20,10 @@ const App = () => {
         onChange={(e) => setsearchTerm(e.target.value)}
       />
       <ul>
-        {
-          fruits.map(fruit=>{
-            <li>{fruit}</li>
-          })
-        }
+        {filterFruits.map((fruit) => {
+          <li>{fruit}</li>;
+        })}
       </ul>
-       
     </div>
   );
 };
